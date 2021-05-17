@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+  font-family: SuperMario;
+  src: url(./fonts/SuperMario256.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: url('./images/Background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100%;
+}
+.main-wrap {
+    text-align: center;
+    margin: auto;
+    width: 80vw;
+}
+.main-wrap div {
+  display: inline-block;
+  margin: 10px 20px;
+}
+.key {
+  text-align: center;
+  width: 150px;
+  border: 4px solid #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  transition: all .07s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
+}
+.key * {
+  cursor: pointer;
+}
+label {
+  display: block;
+  font-size: 60px;
+  font-family: SuperMario;
+}
+span.sound {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+.playing-yellow {
+  transform: scale(1.1);
+  border-color: #fdff00;
+  color: #fdff00;
+  box-shadow: 0 0 1rem #fdff00;
+}
+.playing-green {
+  transform: scale(1.1);
+  border-color: #4db000;
+  color: #4db000;
+  box-shadow: 0 0 1rem #4db000;
+}
+.playing-red {
+  transform: scale(1.1);
+  border-color: #ff0000;
+  color: #ff0000;
+  box-shadow: 0 0 1rem #ff0000;
+}
+.playing-blue {
+  transform: scale(1.1);
+  border-color: #1500ff;
+  color: #1500ff;
+  box-shadow: 0 0 1rem #1500ff;
+}
+
+
+@media only screen and (max-width: 480px){
+  .main-wrap {
+    width: unset;
+  }
+  .main-wrap div {
+    margin: 10px;
+  }
+  html {
+    background-position: unset;
+  }
+}
+@media only screen and (max-width: 375px){
+  .key {
+    padding: 5px;
+    width: 130px;
+  }
+  span.sound {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 320px){
+  label {
+    font-size: 48px;
+  }
+  .key {
+    width: 125px;
+  }
+}
